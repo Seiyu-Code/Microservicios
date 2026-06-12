@@ -1,22 +1,19 @@
-package org.example.ejercicio4;
+package org.example.ejercicioVehiculos;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        Biblioteca biblioteca = new Biblioteca("Mi Biblioteca");
+        Flota flota = new Flota();
 
-        biblioteca.agregarRecurso(
-                new LibroElectronico("Clean Code", "Robert Martin", 2008, "PDF", 5.2, 450, true)
+        flota.agregarVehiculo(
+                new AutoElectrico("BYD", 200, 0.2, 750)
         );
 
-        biblioteca.agregarRecurso(
-                new LibroElectronico("Java Basics", "Autor X", 2001, "EPUB", 3.1, 300, false)
+        flota.agregarVehiculo(
+                new VehiculoGasolina("Mazda", 200, 0.02, 15500)
         );
 
-        biblioteca.agregarRecurso(
-                new LibroElectronico("Microservicios", "Autor Y", 2015, "PDF", 6.5, 500, true)
-        );
-
-        biblioteca.imprimir();
+        flota.imprimir();
     }
 }
